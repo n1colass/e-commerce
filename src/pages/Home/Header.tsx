@@ -7,7 +7,11 @@ const Header = () => {
     <>
       <AppBar color="default" position="static">
         <Toolbar>
-          <Typography variant="h5" align="center" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h4"
+            align="center"
+            sx={{ flexGrow: 1, textTransform: "uppercase", fontWeight: 700 }}
+          >
             Future Shop
           </Typography>
           <IconButton aria-label="cart" color="inherit">

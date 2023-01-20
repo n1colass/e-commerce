@@ -1,0 +1,182 @@
+[
+  {
+    "id": 0,
+    "title": "Apple",
+    "category": "Fruits",
+    "price": "0.50"
+  },
+  {
+    "id": 1,
+    "title": "Peach",
+    "category": "Fruits",
+    "price": "0.75"
+  },
+  {
+    "id": 2,
+    "title": "Banana",
+    "category": "Fruits",
+    "price": "0.60"
+  },
+  {
+    "id": 3,
+    "title": "Peach",
+    "category": "Fruits",
+    "price": "1"
+  },
+  {
+    "id": 4,
+    "title": "Pineapple",
+    "category": "Fruits",
+    "price": "1.55"
+  },
+  {
+    "id": 5,
+    "title": "Apple pie",
+    "category": "Desserts",
+    "price": "1"
+  },
+  {
+    "id": 6,
+    "title": "Cheesecake",
+    "category": "Desserts",
+    "price": "1.10"
+  },
+  {
+    "id": 7,
+    "title": "Pecan pie",
+    "category": "Desserts",
+    "price": "1.25"
+  },
+  {
+    "id": 8,
+    "title": "Carrot cake",
+    "category": "Desserts",
+    "price": "1.40"
+  },
+  {
+    "id": 9,
+    "title": "Banana pudding",
+    "category": "Desserts",
+    "price": "2"
+  },
+  {
+    "id": 10,
+    "title": "Burger",
+    "category": "Fast food",
+    "price": "1.25"
+  },
+  {
+    "id": 11,
+    "title": "Pizza",
+    "category": "Fast food",
+    "price": "3.60"
+  },
+  {
+    "id": 12,
+    "title": "French fries",
+    "category": "Fast food",
+    "price": "0.90"
+  },
+  {
+    "id": 13,
+    "title": "Chiken nuggets",
+    "category": "Fast food",
+    "price": "1.75"
+  },
+  {
+    "id": 14,
+    "title": "Hot dog",
+    "category": "Fast food",
+    "price": "1.55"
+  },
+  {
+    "id": 15,
+    "title": "Water",
+    "category": "Drinks",
+    "price": "0.25"
+  },
+  {
+    "id": 16,
+    "title": "Fanta",
+    "category": "Drinks",
+    "price": "0.75"
+  },
+  {
+    "id": 17,
+    "title": "Coca cola",
+    "category": "Drinks",
+    "price": "0.60"
+  },
+  {
+    "id": 18,
+    "title": "Sprite",
+    "category": "Drinks",
+    "price": "1"
+  },
+  {
+    "id": 19,
+    "title": "Miranda",
+    "category": "Drinks",
+    "price": "1.55"
+  },
+  {
+    "id": 20,
+    "title": "TV",
+    "category": "Electronics",
+    "price": "365"
+  },
+  {
+    "id": 21,
+    "title": "Mouse",
+    "category": "Electronics",
+    "price": "20"
+  },
+  {
+    "id": 22,
+    "title": "Fridge",
+    "category": "Electronics",
+    "price": "560"
+  },
+  {
+    "id": 23,
+    "title": "Monitor",
+    "category": "Electronics",
+    "price": "145"
+  },
+  {
+    "id": 24,
+    "title": "Videocard",
+    "category": "Electronics",
+    "price": "270"
+  },
+  {
+    "id": 25,
+    "title": "Table",
+    "category": "Furniture",
+    "price": "70"
+  },
+  {
+    "id": 26,
+    "title": "Chair",
+    "category": "Furniture",
+    "price": "30"
+  },
+  {
+    "id": 27,
+    "title": "Bed",
+    "category": "Furniture",
+    "price": "185"
+  },
+  {
+    "id": 28,
+    "title": "Сloset",
+    "category": "Furniture",
+    "price": "110"
+  },
+  {
+    "id": 29,
+    "title": "Kitchen",
+    "category": "Furniture",
+    "price": "680"
+  }
+]
