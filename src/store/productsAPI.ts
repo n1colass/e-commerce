@@ -7,11 +7,11 @@ interface Product {
 }
 export const productsAPI = createApi({
   reducerPath: "productsAPI",
-  baseQuery: fetchBaseQuery({ baseUrl: "../data" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
   endpoints: (build) => ({
-    getProducts: build.query<Product, string>({
-      query: () => "/products.json",
-      //transformResponse: (response) => {},
+    getProducts: build.query<Product, void>({
+      query: () => "/products",
+      //transformResponse:
     }),
   }),
 });
