@@ -1,16 +1,18 @@
 import React from "react";
 import { Container, Box, Typography, Stack } from "@mui/material";
 import { assignIcon } from "../utils/assignIcon";
+import { Product } from "../types/product";
 
-const ProductCard = () => {
-  const { icon, colorBg } = assignIcon("Desserts");
+const ProductCard = ({ id, category, title, price }: Product) => {
+  const { icon, colorBg } = assignIcon(`${category}`);
   return (
     <Container
       disableGutters
       sx={{
-        width: "200px",
+        width: "175px",
         height: "250px",
-        padding: "0 15px",
+        padding: "0 10px",
+        margin: "10px",
         boxShadow: 5,
         borderRadius: 3,
       }}
@@ -20,7 +22,7 @@ const ProductCard = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "170px",
+          width: "155px",
           height: "120px",
           margin: "15px 0 15px 0",
           backgroundColor: `${colorBg}`,
@@ -30,9 +32,9 @@ const ProductCard = () => {
         {icon}
       </Box>
       <Stack spacing={1} sx={{ textAlign: "left" }}>
-        <Typography variant="body2"> Apple pie </Typography>
+        <Typography variant="body2"> {title} </Typography>
         <Typography variant="body1" sx={{ fontWeight: "700" }}>
-          1$
+          {price}$
         </Typography>
       </Stack>
     </Container>

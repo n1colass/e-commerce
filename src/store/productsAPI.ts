@@ -4,7 +4,7 @@ export const productsAPI = createApi({
   reducerPath: "productsAPI",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
   endpoints: (build) => ({
-    getProducts: build.query<Product, void>({
+    getProducts: build.query<Product[], void>({
       query: () => "/products",
       //transformResponse:
     }),
