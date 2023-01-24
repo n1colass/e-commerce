@@ -1,28 +1,22 @@
 {
   "products": [
     {
-      "id": 0,
-      "title": "Apple",
-      "category": "Fruits",
-      "price": 0.5
-    },
-    {
-      "id": 1,
-      "title": "Peach",
-      "category": "Fruits",
-      "price": 0.75
-    },
-    {
-      "id": 2,
-      "title": "Banana",
-      "category": "Fruits",
-      "price": 0.6
+      "id": 27,
+      "title": "Bed",
+      "category": "Furniture",
+      "price": 185
     },
     {
       "id": 3,
       "title": "Peach",
       "category": "Fruits",
       "price": 1
+    },
+    {
+      "id": 19,
+      "title": "Miranda",
+      "category": "Drinks",
+      "price": 1.55
     },
     {
       "id": 4,
@@ -43,16 +37,10 @@
       "price": 1.1
     },
     {
-      "id": 7,
-      "title": "Pecan pie",
-      "category": "Desserts",
-      "price": 1.25
-    },
-    {
-      "id": 8,
-      "title": "Carrot cake",
-      "category": "Desserts",
-      "price": 1.4
+      "id": 24,
+      "title": "Videocard",
+      "category": "Electronics",
+      "price": 270
     },
     {
       "id": 9,
@@ -73,16 +61,40 @@
       "price": 3.6
     },
     {
-      "id": 12,
-      "title": "French fries",
-      "category": "Fast food",
-      "price": 0.9
+      "id": 0,
+      "title": "Apple",
+      "category": "Fruits",
+      "price": 0.5
+    },
+    {
+      "id": 1,
+      "title": "Peach",
+      "category": "Fruits",
+      "price": 0.75
+    },
+    {
+      "id": 23,
+      "title": "Monitor",
+      "category": "Electronics",
+      "price": 145
+    },
+    {
+      "id": 25,
+      "title": "Table",
+      "category": "Furniture",
+      "price": 70
     },
     {
       "id": 13,
       "title": "Chiken nuggets",
       "category": "Fast food",
       "price": 1.75
+    },
+    {
+      "id": 2,
+      "title": "Banana",
+      "category": "Fruits",
+      "price": 0.6
     },
     {
       "id": 14,
@@ -103,10 +115,22 @@
       "price": 0.75
     },
     {
+      "id": 22,
+      "title": "Fridge",
+      "category": "Electronics",
+      "price": 560
+    },
+    {
       "id": 17,
       "title": "Coca cola",
       "category": "Drinks",
       "price": 0.6
+    },
+    {
+      "id": 7,
+      "title": "Pecan pie",
+      "category": "Desserts",
+      "price": 1.25
     },
     {
       "id": 18,
@@ -115,16 +139,16 @@
       "price": 1.0
     },
     {
-      "id": 19,
-      "title": "Miranda",
-      "category": "Drinks",
-      "price": 1.55
-    },
-    {
       "id": 20,
       "title": "TV",
       "category": "Electronics",
       "price": 365
+    },
+    {
+      "id": 8,
+      "title": "Carrot cake",
+      "category": "Desserts",
+      "price": 1.4
     },
     {
       "id": 21,
@@ -133,40 +157,16 @@
       "price": 20
     },
     {
-      "id": 22,
-      "title": "Fridge",
-      "category": "Electronics",
-      "price": 560
-    },
-    {
-      "id": 23,
-      "title": "Monitor",
-      "category": "Electronics",
-      "price": 145
-    },
-    {
-      "id": 24,
-      "title": "Videocard",
-      "category": "Electronics",
-      "price": 270
-    },
-    {
-      "id": 25,
-      "title": "Table",
-      "category": "Furniture",
-      "price": 70
-    },
-    {
       "id": 26,
       "title": "Chair",
       "category": "Furniture",
       "price": 30
     },
     {
-      "id": 27,
-      "title": "Bed",
-      "category": "Furniture",
-      "price": 185
+      "id": 12,
+      "title": "French fries",
+      "category": "Fast food",
+      "price": 0.9
     },
     {
       "id": 28,
