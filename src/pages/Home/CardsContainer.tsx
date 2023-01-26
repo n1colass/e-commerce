@@ -18,6 +18,7 @@ const CardsContainer = () => {
         flexWrap: "wrap",
         margin: "0",
         padding: "0",
+        border: "3px solid blue",
       }}
     >
       {data ? (

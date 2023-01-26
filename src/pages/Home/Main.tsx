@@ -1,9 +1,8 @@
 import React from "react";
 import Discount from "./Discount";
 import { Container } from "@mui/material";
-
 import CardsContainer from "./CardsContainer";
-import FilterMenu from "./FilterMenu";
+import FilterContainer from "./FilterContainer";
 
 const Main = () => {
   return (
@@ -24,7 +23,7 @@ const Main = () => {
             justifyContent: "center",
           }}
         >
-          <FilterMenu />
+          <FilterContainer></FilterContainer>
           <CardsContainer />
         </Container>
       </Container>

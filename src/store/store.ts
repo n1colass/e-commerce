@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { productsAPI } from "./productsAPI";
+import filterCategorySlice from "./slices/filterCategorySlice";
+
 export const store = configureStore({
   reducer: {
+    //category: filterCategorySlice.reducer,
     [productsAPI.reducerPath]: productsAPI.reducer,
   },
   middleware: (getDefaultMiddleware) =>
