@@ -8,7 +8,8 @@ const FilterList = () => {
   const toggleCheck = (item: number) => {
     const currentCheckIndex = checkedItems.indexOf(item);
     const newCheckedItems = [...checkedItems];
-
+    const currentCategory = categories.filter((el) => el.id === item)[0]
+      .category;
     if (currentCheckIndex !== -1) {
       newCheckedItems.splice(currentCheckIndex, 1);
     }
@@ -17,10 +18,7 @@ const FilterList = () => {
     }
 
     setCheckedItems(newCheckedItems);
-    console.log(
-      categories.filter((el) => el.id === item)[0].category,
-      newCheckedItems.includes(item)
-    );
+    console.log(currentCategory, newCheckedItems.includes(item));
   };
 
   return (

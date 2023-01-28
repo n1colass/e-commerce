@@ -1,18 +1,23 @@
-import { PayloadAction } from "@reduxjs/toolkit";
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { Product } from "../../types/product";
-
-const initialState: Product[] = [];
-
+type state = {
+  status: string;
+  products: Product[];
+};
+const initialState: state = {
+  status: "empty",
+  products: [],
+};
 const filterCategorySlice = createSlice({
   name: "category",
   initialState,
   reducers: {
-    setFilterCategory(state, action: PayloadAction<Product[]>) {
-      state.concat(action.payload);
+    setData: (state, action: PayloadAction<Product[]>) => {
+      state.products = state.products.concat(action.payload);
+      state.status = "fullfied";
     },
   },
 });
 
-export const { setFilterCategory } = filterCategorySlice.actions;
+export const { setData } = filterCategorySlice.actions;
 export default filterCategorySlice.reducer;

@@ -1,12 +1,14 @@
 import React from "react";
 import { Container } from "@mui/material";
-import { useGetProductsQuery } from "../../store/productsAPI";
 import ProductCard from "../../components/ProductCard";
 import { Product } from "../../types/product";
 import Loading from "../../components/Loading";
+
+import { useAppSelector } from "../../hooks/redux";
+
 const CardsContainer = () => {
-  const { data, isSuccess, error } = useGetProductsQuery();
-  if (isSuccess) console.log(data, isSuccess);
+  const data = useAppSelector((state) => state.category);
+  console.log(data);
   return (
     <Container
       disableGutters
@@ -21,8 +23,8 @@ const CardsContainer = () => {
         border: "3px solid blue",
       }}
     >
-      {data ? (
-        data.map((item: Product) => {
+      {data.status === "fullfied" ? (
+        data.products.map((item: Product) => {
           return <ProductCard key={item.id} {...item} />;
         })
       ) : (

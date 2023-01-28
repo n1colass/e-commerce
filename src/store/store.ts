@@ -1,10 +1,10 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { productsAPI } from "./productsAPI";
 import filterCategorySlice from "./slices/filterCategorySlice";
 
 export const store = configureStore({
   reducer: {
-    //category: filterCategorySlice.reducer,
+    category: filterCategorySlice,
     [productsAPI.reducerPath]: productsAPI.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -13,9 +13,3 @@ export const store = configureStore({
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;

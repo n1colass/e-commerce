@@ -6,7 +6,6 @@ export const productsAPI = createApi({
   endpoints: (build) => ({
     getProducts: build.query<Product[], void>({
       query: () => "/products",
-      //transformResponse:
     }),
   }),
 });
