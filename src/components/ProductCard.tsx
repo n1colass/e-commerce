@@ -3,7 +3,7 @@ import { Container, Box, Typography, Stack } from "@mui/material";
 import { assignIcon } from "../utils/assignIcon";
 import { Product } from "../types/product";
 
-const ProductCard = ({ id, category, title, price }: Product) => {
+const ProductCard = ({ _id, category, title, price }: Product) => {
   const { icon, colorBg } = assignIcon(`${category}`);
   return (
     <Container

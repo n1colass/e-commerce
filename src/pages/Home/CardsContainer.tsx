@@ -25,7 +25,7 @@ const CardsContainer = () => {
     >
       {data.status === "fullfied" ? (
         data.products.map((item: Product) => {
-          return <ProductCard key={item.id} {...item} />;
+          return <ProductCard key={item._id} {...item} />;
         })
       ) : (
         <Loading></Loading>
