@@ -4,10 +4,14 @@ export const productsAPI = createApi({
   reducerPath: "productsAPI",
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_MAIN_URL }),
   endpoints: (build) => ({
-    getProducts: build.query<Product[], void>({
-      query: () => "/",
+    sendCategory: build.mutation<Product[], string[]>({
+      query: (category) => ({
+        url: "/category",
+        method: "POST",
+        body: category,
+      }),
     }),
   }),
 });
 
-export const { useGetProductsQuery } = productsAPI;
+export const { useSendCategoryMutation } = productsAPI;

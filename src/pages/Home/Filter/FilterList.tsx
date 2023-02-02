@@ -1,15 +1,27 @@
 import React from "react";
 import { FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 import { categories } from "../../../types/categories";
+import { useSendCategoryMutation } from "../../../store/productsAPI";
+import { useDebounce } from "../../../hooks/useDebounce";
+import { setData } from "../../../store/slices/filterCategorySlice";
+import { useAppDispatch } from "../../../hooks/redux";
+import { Product } from "../../../types/product";
 
 const FilterList = () => {
-  const [checkedItems, setCheckedItems] = React.useState<number[]>([]);
+  const [checkedItems, setCheckedItems] = React.useState<string[]>([]);
+  const [sendCategory, { data, isSuccess }] = useSendCategoryMutation();
 
-  const toggleCheck = (item: number) => {
+  const dispatch = useAppDispatch();
+  React.useEffect(() => {
+    console.log(data, isSuccess);
+    if (isSuccess === true) {
+      dispatch(setData(data as Product[]));
+    }
+  }, [dispatch, isSuccess]);
+
+  const toggleCheck = (item: string) => {
     const currentCheckIndex = checkedItems.indexOf(item);
     const newCheckedItems = [...checkedItems];
-    const currentCategory = categories.filter((el) => el.id === item)[0]
-      .category;
     if (currentCheckIndex !== -1) {
       newCheckedItems.splice(currentCheckIndex, 1);
     }
@@ -18,8 +30,14 @@ const FilterList = () => {
     }
 
     setCheckedItems(newCheckedItems);
-    console.log(currentCategory, newCheckedItems.includes(item));
   };
+
+  React.useEffect(
+    useDebounce(async () => {
+      await sendCategory(checkedItems);
+    }, 700),
+    [checkedItems]
+  );
 
   return (
     <FormGroup>
@@ -29,8 +47,8 @@ const FilterList = () => {
             key={item.id}
             control={
               <Checkbox
-                onChange={() => toggleCheck(item.id)}
-                checked={checkedItems.includes(item.id)}
+                onChange={() => toggleCheck(item.category)}
+                checked={checkedItems.includes(item.category)}
               />
             }
             label={item.category}

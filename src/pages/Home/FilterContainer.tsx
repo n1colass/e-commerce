@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, typography } from "@mui/system";
+import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import FilterList from "./Filter/FilterList";
 

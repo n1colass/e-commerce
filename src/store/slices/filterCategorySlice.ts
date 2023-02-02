@@ -13,7 +13,7 @@ const filterCategorySlice = createSlice({
   initialState,
   reducers: {
     setData: (state, action: PayloadAction<Product[]>) => {
-      state.products = state.products.concat(action.payload);
+      state.products = action.payload;
       state.status = "fullfied";
     },
   },
