@@ -3,6 +3,7 @@ import { Container } from "@mui/material";
 import ProductCard from "../../components/ProductCard";
 import { Product } from "../../types/product";
 import Loading from "../../components/Loading";
+import SortPanel from "./SortPanel";
 
 import { useAppSelector } from "../../hooks/redux";
 
@@ -19,10 +20,11 @@ const CardsContainer = () => {
         justifyContent: "center",
         flexWrap: "wrap",
         margin: "0",
-        padding: "0",
+        padding: "0 30px",
         border: "3px solid blue",
       }}
     >
+      <SortPanel></SortPanel>
       {data.status === "fullfied" ? (
         data.products.map((item: Product) => {
           return <ProductCard key={item._id} {...item} />;

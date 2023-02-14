@@ -13,12 +13,13 @@ const Main = () => {
         sx={{ padding: 0, overflowX: "hidden" }}
       >
         <Discount />
+
         <Container
           maxWidth={false}
           disableGutters
           sx={{
             width: "100%",
-            padding: "25px 30px",
+            padding: "0px 30px 25px 30px",
             display: "flex",
             justifyContent: "center",
           }}
