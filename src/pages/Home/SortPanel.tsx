@@ -5,18 +5,14 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { sortData } from "../../store/slices/filterCategorySlice";
-import { useAppDispatch } from "../../hooks/redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 
 const SortPanel = () => {
-  const [sort, setSort] = React.useState("");
+  const sort = useAppSelector((state) => state.category.sort);
   const dispatch = useAppDispatch();
   const handleChange = (event: SelectChangeEvent) => {
-    setSort(event.target.value as string);
+    dispatch(sortData(event.target.value as string));
   };
-  React.useEffect(() => {
-    console.log(sort);
-    dispatch(sortData(sort));
-  }, [sort]);
   return (
     <Container
       maxWidth={false}
