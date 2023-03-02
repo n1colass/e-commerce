@@ -3,9 +3,9 @@ import { Container } from "@mui/material";
 import ProductCard from "../../components/ProductCard";
 import { Product } from "../../types/product";
 import Loading from "../../components/Loading";
-import SortPanel from "./SortPanel";
 
 import { useAppSelector } from "../../hooks/redux";
+import PanelContainer from "./Panel/PanelContainer";
 
 const CardsContainer = () => {
   const data = useAppSelector((state) => state.category);
@@ -24,7 +24,7 @@ const CardsContainer = () => {
         border: "3px solid blue",
       }}
     >
-      <SortPanel></SortPanel>
+      <PanelContainer></PanelContainer>
       {data.status === "fullfied" ? (
         data.products.map((item: Product) => {
           return <ProductCard key={item._id} {...item} />;

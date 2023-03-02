@@ -11,7 +11,14 @@ export const productsAPI = createApi({
         body: category,
       }),
     }),
+    sendSearch: build.mutation<Product[], string>({
+      query: (search) => ({
+        url: "/search",
+        method: "POST",
+        body: search,
+      }),
+    }),
   }),
 });
 
-export const { useSendCategoryMutation } = productsAPI;
+export const { useSendCategoryMutation, useSendSearchMutation } = productsAPI;
