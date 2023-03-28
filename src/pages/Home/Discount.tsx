@@ -8,7 +8,6 @@ const Discount = () => {
       sx={{
         width: "100vw",
         padding: "0",
-        margin: "0 0 5px 0",
         backgroundColor: "#10F1F1 ",
       }}
     >

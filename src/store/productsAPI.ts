@@ -15,7 +15,7 @@ export const productsAPI = createApi({
       query: (search) => ({
         url: "/search",
         method: "POST",
-        body: search,
+        body: { search: search },
       }),
     }),
   }),
