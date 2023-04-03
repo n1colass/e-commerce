@@ -4,7 +4,10 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { useSendSearchMutation } from "../../../store/productsAPI";
 import { Button, Box } from "@mui/material";
-import { setData } from "../../../store/slices/filterCategorySlice";
+import {
+  setData,
+  setLoadingStatus,
+} from "../../../store/slices/filterCategorySlice";
 import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "../../../types/product";
 
@@ -61,6 +64,7 @@ const SearchField = () => {
   const dispatch = useAppDispatch();
   const sendRequest = async () => {
     if (input) {
+      dispatch(setLoadingStatus());
       await sendSearch(input);
     }
   };

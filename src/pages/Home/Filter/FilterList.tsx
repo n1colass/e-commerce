@@ -3,7 +3,10 @@ import { FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 import { categories } from "../../../types/categories";
 import { useSendCategoryMutation } from "../../../store/productsAPI";
 import { useDebounce } from "../../../hooks/useDebounce";
-import { setData } from "../../../store/slices/filterCategorySlice";
+import {
+  setData,
+  setLoadingStatus,
+} from "../../../store/slices/filterCategorySlice";
 import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "../../../types/product";
 
@@ -30,6 +33,7 @@ const FilterList = () => {
     }
 
     setCheckedItems(newCheckedItems);
+    dispatch(setLoadingStatus());
   };
 
   React.useEffect(

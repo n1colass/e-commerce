@@ -20,6 +20,9 @@ const filterCategorySlice = createSlice({
       state.status = "fullfied";
       state.sort = "";
     },
+    setLoadingStatus: (state) => {
+      state.status = "loading";
+    },
     sortData: (state, action: PayloadAction<string>) => {
       if (action.payload === "Lower price") {
         state.sort = action.payload;
@@ -39,5 +42,6 @@ const filterCategorySlice = createSlice({
   },
 });
 
-export const { setData, sortData } = filterCategorySlice.actions;
+export const { setData, sortData, setLoadingStatus } =
+  filterCategorySlice.actions;
 export default filterCategorySlice.reducer;
