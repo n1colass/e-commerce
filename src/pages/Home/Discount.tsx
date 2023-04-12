@@ -7,7 +7,7 @@ const Discount = () => {
       maxWidth={false}
       sx={{
         width: "100vw",
-        padding: "0",
+        padding: 0,
         backgroundColor: "#10F1F1 ",
       }}
     >

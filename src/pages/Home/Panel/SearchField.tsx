@@ -29,7 +29,7 @@ const Search = styled("div")(({ theme }) => ({
   },
   justifyContent: "space-between",
   [theme.breakpoints.up("sm")]: {
-    width: "40%",
+    width: "60%",
   },
 }));
 

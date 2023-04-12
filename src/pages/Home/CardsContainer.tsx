@@ -20,7 +20,7 @@ const CardsContainer = () => {
         justifyContent: "center",
         flexWrap: "wrap",
         margin: "0",
-        padding: "0 30px",
+        padding: "0 20px",
         border: "3px solid blue",
       }}
     >

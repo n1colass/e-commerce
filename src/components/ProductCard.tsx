@@ -1,22 +1,26 @@
 import React from "react";
+import { styled } from "@mui/material/styles";
 import { Container, Box, Typography, Stack } from "@mui/material";
 import { assignIcon } from "../utils/assignIcon";
 import { Product } from "../types/product";
+import { theme } from "../pages/Home";
 
-const ProductCard = ({ _id, category, title, price }: Product) => {
+const CardContainer = styled(Container)(({ theme }) => ({
+  width: "175px",
+  height: "250px",
+  padding: "0 10px",
+  margin: "15px",
+  boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
+  borderRadius: "15px",
+  [theme.breakpoints.up("lg")]: {
+    margin: "10px",
+  },
+}));
+
+const ProductCard = ({ category, title, price }: Product) => {
   const { icon, colorBg } = assignIcon(`${category}`);
   return (
-    <Container
-      disableGutters
-      sx={{
-        width: "175px",
-        height: "250px",
-        padding: "0 10px",
-        margin: "10px",
-        boxShadow: 5,
-        borderRadius: 3,
-      }}
-    >
+    <CardContainer disableGutters sx={{}}>
       <Box
         sx={{
           display: "flex",
@@ -37,7 +41,7 @@ const ProductCard = ({ _id, category, title, price }: Product) => {
           {price}$
         </Typography>
       </Stack>
-    </Container>
+    </CardContainer>
   );
 };
 

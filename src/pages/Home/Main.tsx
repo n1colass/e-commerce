@@ -10,7 +10,13 @@ const Main = () => {
       <Container
         disableGutters
         maxWidth={false}
-        sx={{ padding: 0, overflowX: "hidden" }}
+        sx={{
+          padding: 0,
+          overflowX: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
         <Discount />
 
@@ -22,6 +28,7 @@ const Main = () => {
             padding: "0px 30px 25px 30px",
             display: "flex",
             justifyContent: "center",
+            maxWidth: "1600px",
           }}
         >
           <FilterContainer></FilterContainer>
