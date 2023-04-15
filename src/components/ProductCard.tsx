@@ -9,11 +9,12 @@ const CardContainer = styled(Container)(({ theme }) => ({
   width: "175px",
   height: "250px",
   padding: "0 10px",
-  margin: "15px",
-  boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
-  borderRadius: "15px",
+  margin: "20px 10px 0 10px",
+  //boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
+  //borderRadius: "15px",
+  border: "1px solid #dfdcdc",
   [theme.breakpoints.up("lg")]: {
-    margin: "10px",
+    //margin: "20px 10px 0 10px",
   },
 }));
 
@@ -30,7 +31,7 @@ const ProductCard = ({ category, title, price }: Product) => {
           height: "120px",
           margin: "15px 0 15px 0",
           backgroundColor: `${colorBg}`,
-          borderRadius: 3,
+          borderRadius: 1,
         }}
       >
         {icon}

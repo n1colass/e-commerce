@@ -9,6 +9,7 @@ const PanelContainer = () => {
       disableGutters
       sx={{
         width: "100%",
+        height: "fit-content",
         padding: "0",
         display: "flex",
         justifyContent: "center",

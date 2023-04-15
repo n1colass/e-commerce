@@ -17,11 +17,12 @@ const CardsContainer = () => {
       sx={{
         width: "85%",
         display: "flex",
+        height: "fit-content",
         justifyContent: "center",
         flexWrap: "wrap",
         margin: "0",
         padding: "0 20px",
-        border: "3px solid blue",
+        border: "0px solid blue",
       }}
     >
       <PanelContainer></PanelContainer>
