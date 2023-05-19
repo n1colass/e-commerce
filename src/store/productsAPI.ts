@@ -18,7 +18,14 @@ export const productsAPI = createApi({
         body: { search: search },
       }),
     }),
+    getProductById: build.query<Product, string>({
+      query: (id: string) => `/products/${id}`,
+    }),
   }),
 });
 
-export const { useSendCategoryMutation, useSendSearchMutation } = productsAPI;
+export const {
+  useSendCategoryMutation,
+  useSendSearchMutation,
+  useGetProductByIdQuery,
+} = productsAPI;

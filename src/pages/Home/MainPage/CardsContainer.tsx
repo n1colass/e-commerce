@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "@mui/material";
-import ProductCard from "../../components/ProductCard";
-import { Product } from "../../types/product";
-import Loading from "../../components/Loading";
-import NotMatch from "../../components/NotMatch";
-import { useAppSelector } from "../../hooks/redux";
-import PanelContainer from "./Panel/PanelContainer";
+import ProductCard from "../ProductView/ProductCard";
+import { Product } from "../../../types/product";
+import Loading from "../../../components/Loading";
+import NotMatch from "../../../components/NotMatch";
+import { useAppSelector } from "../../../hooks/redux";
+import PanelContainer from "../Panel/PanelContainer";
 
 const CardsContainer = () => {
   const data = useAppSelector((state) => state.category);
@@ -21,7 +21,7 @@ const CardsContainer = () => {
         justifyContent: "center",
         flexWrap: "wrap",
         margin: "0",
-        padding: "0 20px",
+        padding: "0 20px 20px 20px",
         border: "0px solid blue",
       }}
     >

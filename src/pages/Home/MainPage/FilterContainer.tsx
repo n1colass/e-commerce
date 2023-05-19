@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import FilterList from "./Filter/FilterList";
+import FilterList from "../Filter/FilterList";
 
 const FilterContainer = () => {
   return (
