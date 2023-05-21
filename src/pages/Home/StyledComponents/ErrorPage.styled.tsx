@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Container } from "@mui/material";
 import useWindowHeight from "../../../hooks/useWindowsHeight";
 
-export const ContainerError = styled(Container)(({}) => {
+export const ContainerError = styled(Container)(() => {
   const screenHeight = useWindowHeight(); // dymamic to control height of main container
   const minHeight = screenHeight - 148;
 

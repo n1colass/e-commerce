@@ -6,14 +6,14 @@ export const productsAPI = createApi({
   endpoints: (build) => ({
     sendCategory: build.mutation<Product[], string[]>({
       query: (category) => ({
-        url: "/category",
+        url: "/products/category",
         method: "POST",
         body: category,
       }),
     }),
     sendSearch: build.mutation<Product[], string>({
       query: (search) => ({
-        url: "/search",
+        url: "/products/search",
         method: "POST",
         body: { search: search },
       }),

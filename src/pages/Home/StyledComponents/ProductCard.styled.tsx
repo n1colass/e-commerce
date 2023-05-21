@@ -15,7 +15,7 @@ export const CardContainer = styled(Container)(({ theme }) => ({
   },
 }));
 
-export const LinkProduct = styled(Link)(({}) => ({
+export const LinkProduct = styled(Link)(() => ({
   color: "black",
   textDecoration: "none",
   "&:hover": {

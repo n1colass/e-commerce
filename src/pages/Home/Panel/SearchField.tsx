@@ -1,5 +1,10 @@
 import * as React from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import {
+  Search,
+  SearchIconWrapper,
+  StyledInputBase,
+} from "../StyledComponents/SearchField.styled";
 import { useSendSearchMutation } from "../../../store/productsAPI";
 import { Button, Box } from "@mui/material";
 import {
@@ -8,11 +13,6 @@ import {
 } from "../../../store/slices/filterCategorySlice";
 import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "../../../types/product";
-import {
-  Search,
-  SearchIconWrapper,
-  StyledInputBase,
-} from "../StyledComponents/SearchField.styled";
 
 const SearchField = () => {
   const [input, setInput] = React.useState<string>("");
